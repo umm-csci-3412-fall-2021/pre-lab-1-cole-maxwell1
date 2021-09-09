@@ -1,4 +1,4 @@
-#!/usr/bin/env bats
+#!/usr/bin/bash
 
 #The "contents" that need to be wrapped by html header/footer
 contents=$1
@@ -8,4 +8,4 @@ headerFooterName=$2
 outputFileName=$3
 
 #Concatinate files together into the output file
-cat "${headerFooterName}_header.html" "*/$contents" "${headerFooterName}_footer.html" > "$outputFileName"
+cat "${headerFooterName}_header.html" "$contents" "${headerFooterName}_footer.html" > "$outputFileName"
